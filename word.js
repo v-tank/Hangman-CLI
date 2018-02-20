@@ -17,6 +17,8 @@ var Word = function(word) {
       string += arrayOfLetters[i].printLetter() + " ";
     }
     console.log(string);
+    console.log("\n");
+    return string;
   }
 
   this.guess = function(char) {

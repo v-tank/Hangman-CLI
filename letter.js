@@ -1,5 +1,4 @@
-var Letter = function(letter, index) {
-  this.index = index;
+var Letter = function(letter) {
   this.letter = letter;
   this.guessed = false;
 
@@ -17,9 +16,7 @@ var Letter = function(letter, index) {
     if (char === this.letter.toLowerCase()) {
       this.guessed = true;
       this.printLetter();
-      console.log("Yup");
     } else {
-      console.log("Nope");
       this.printLetter();
     }
   }
