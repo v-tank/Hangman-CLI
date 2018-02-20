@@ -1,29 +1,30 @@
-var Letter = function(letter) {
+var Letter = function(letter, index) {
+  this.index = index;
   this.letter = letter;
-  this.guessedCorrectly = false;
-  
-  this.toString = function() {
-    if (guessedCorrectly) {
-      return this.letter;
+  this.guessed = false;
+
+  this.printLetter = function() {
+    if (this.guessed) {
+      // console.log(this.letter);
+      return (this.letter.toUpperCase());
     } else {
-      return '_';
+      // console.log("_");
+      return "_";
     }
   }
 
-  this.letterChecker = function(char) {
-    if (char === this.letter) {
-      this.guessedCorrectly = true;
-      console.log("You guessed correctly!");
+  this.checker = function(char) {
+    if (char === this.letter.toLowerCase()) {
+      this.guessed = true;
+      this.printLetter();
+      console.log("Yup");
     } else {
-      console.log("Wrong!");
+      console.log("Nope");
+      this.printLetter();
     }
   }
 }
 
-// word = "florine"
-var newLetter = new Letter("f");
-console.log(newLetter.letter);
-// console.log(newLetter.letterChecker('i'));
-newLetter.letterChecker('f');
-
 module.exports = Letter;
+// var letter = new Letter('f');
+// letter.checker('i');
