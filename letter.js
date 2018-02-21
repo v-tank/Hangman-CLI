@@ -4,10 +4,8 @@ var Letter = function(letter) {
 
   this.printLetter = function() {
     if (this.guessed) {
-      // console.log(this.letter);
       return (this.letter.toUpperCase());
     } else {
-      // console.log("_");
       return "_";
     }
   }
@@ -23,5 +21,3 @@ var Letter = function(letter) {
 }
 
 module.exports = Letter;
-// var letter = new Letter('f');
-// letter.checker('i');

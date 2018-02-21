@@ -9,15 +9,12 @@ var Word = function(word) {
     arrayOfLetters.push(newLetter);
   }
 
-  // console.log(arrayOfLetters);
-
   this.printToScreen = function() { 
     string = "";
     for (var i=0; i < arrayOfLetters.length; i++) {
       string += arrayOfLetters[i].printLetter() + " ";
     }
     console.log(string);
-    console.log("\n");
     return string;
   }
 
@@ -27,8 +24,5 @@ var Word = function(word) {
     }
   }
 }
-
-// var word = new Word("Chicken");
-// word.printToScreen();
 
 module.exports = Word;
